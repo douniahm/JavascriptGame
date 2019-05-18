@@ -35,10 +35,9 @@
  function shoot(){
      if(isShooting==true && goDown==false && shooterY>10){
          shooterY-=20;
-         console.log(shooterY);
          if(shooterY<=10) {
-            isShooting=false; 
-            shooterY=458;
+             isShooting=false; 
+             shooterY=458;
          }
          crashWith();
      }else if(isShooting==false && shooterY<458 && goDown==true){
