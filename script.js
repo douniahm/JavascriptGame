@@ -37,20 +37,22 @@
          shooterY-=20;
          if(shooterY<=10) {
              isShooting=false; 
-             shooterY=458;
+             shooterY=458; 
+            crashWith();
          }
-         crashWith();
      }else if(isShooting==false && shooterY<458 && goDown==true){
          shooterY+=20;
          crashWith();
      }
  }
 
- function crashWith(shooterx, shootery){
+ function crashWith(){
      rect.forEach(e=>{
-         if(e.xx == shooterx && e.yy == shooter.y) {
-             gowDown==true;
+        //if(e.xx == shooterx && e.yy == shooter.y) {
+        if((e.xx - 10 <= shooterX <= e.xx + 10)  && (e.yy - 5 <= shooterY <= e.yy + 5)) {
+                gowDown==true;
              console.log("crash");
+             window.alert("LOOSER");
          }
      });
 
@@ -80,11 +82,9 @@
  }
  function drawRect(){
      rect.forEach(r =>{
-        // for(i=0;i<5;i++) {
          ctx.fillStyle=r.clr;
          ctx.beginPath();
          ctx.fillRect(r.xx,r.yy,60,10);
-        // }
     });
     }
  function getColor(){
