@@ -35,7 +35,11 @@
  function shoot(){
      if(isShooting==true && goDown==false && shooterY>10){
          shooterY-=20;
-         if(shooterY<=10) isShooting=false; 
+         console.log(shooterY);
+         if(shooterY<=10) {
+            isShooting=false; 
+            shooterY=458;
+         }
          crashWith();
      }else if(isShooting==false && shooterY<458 && goDown==true){
          shooterY+=20;
@@ -59,7 +63,6 @@
  }
  function generateRect(){
      let rand = Math.random();
-     console.log(rand);
      if( rand < 0.3){
      rect.length+=3;
      size+=1;
