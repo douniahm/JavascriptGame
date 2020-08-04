@@ -1,8 +1,8 @@
 # JavascriptGame
-Créée en javascript et l'API CANVAS
+Jeu Créé en javascript et l'API CANVAS
 
 ## Fonctionnement
-Elle génère des barrières aléatoirement, descendant du haut, en différentes couleur.
+Génération des barrières aléatoirement, descendant du haut, en différentes couleur.
 Il s'agit de faire passer la balle du bas jusqu'au haut sans toucher les barrières. 
 
 ![1](https://user-images.githubusercontent.com/36522492/57964428-e6d4cc80-7924-11e9-872a-218a0228ad50.PNG)
